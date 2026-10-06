@@ -15,7 +15,8 @@ def extract_title(text):
             return cleaned
     return None
 
-for path in sorted(Path("docs").glob("*.md")):
-    text = load_markdown(path)
-    title = extract_title(text)
-    print(title)
+if __name__ == "__main__":
+    for path in sorted(Path("docs").glob("*.md")):
+        text = load_markdown(path)
+        title = extract_title(text)
+        print(title)
